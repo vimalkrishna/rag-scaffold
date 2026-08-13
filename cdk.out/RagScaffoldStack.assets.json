@@ -1,0 +1,20 @@
+{
+  "version": "54.0.0",
+  "files": {
+    "a8ac8ff16fb72b3c7e48da4c96b70dade7f34f9d75b7514dce361ac493110ab7": {
+      "displayName": "RagScaffoldStack Template",
+      "source": {
+        "path": "RagScaffoldStack.template.json",
+        "packaging": "file"
+      },
+      "destinations": {
+        "current_account-current_region-073198ca": {
+          "bucketName": "cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}",
+          "objectKey": "a8ac8ff16fb72b3c7e48da4c96b70dade7f34f9d75b7514dce361ac493110ab7.json",
+          "assumeRoleArn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-file-publishing-role-${AWS::AccountId}-${AWS::Region}"
+        }
+      }
+    }
+  },
+  "dockerImages": {}
+}
