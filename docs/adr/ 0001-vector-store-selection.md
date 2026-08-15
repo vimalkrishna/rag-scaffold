@@ -1,0 +1,1 @@
+# S3 Vectors vs OpenSearch vs Aurora

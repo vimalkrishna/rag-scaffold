@@ -1,0 +1,1 @@
+# template to force a "Rejected Alternatives"
