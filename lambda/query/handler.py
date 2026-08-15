@@ -48,7 +48,8 @@ def lambda_handler(event, context):
         print(f"Unhandled error: {exc}")
         return _response(500, {"error": "Internal error processing request"})
 
-
+# flattens and sanitizes the complex nested citation metadata returned by AWS Bedrock’s 
+# RetrieveAndGenerate API into a clean, lightweight list of reference objects for the API caller.
 def _extract_citations(citations):
     return [
         {
@@ -59,7 +60,7 @@ def _extract_citations(citations):
         for ref in citation.get("retrievedReferences", [])
     ]
 
-
+# Basic helper to format a response for API Gateway. In a real application, produces the exact shape API Gateway's HTTP API proxy integration expects (statusCode, headers, body as a JSON string, not a dict)
 def _response(status_code, body_dict):
     return {
         "statusCode": status_code,
